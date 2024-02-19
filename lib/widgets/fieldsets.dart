@@ -22,13 +22,13 @@ class FieldSets extends StatelessWidget {
                 Container(
                   height: 25,
                   width: 25,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("assets/farmers_images/i1.png"),
                     )
                   ),
                 ),
-                Text("30 MINS POLICY")
+                const Text("30 MINS POLICY")
               ],
             ),
             Column(
@@ -36,13 +36,13 @@ class FieldSets extends StatelessWidget {
                 Container(
                   height: 25,
                   width: 25,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("assets/farmers_images/i2.png"),
                     )
                   ),
                 ),
-                Text("TRACEABILITY")
+                const Text("TRACEABILITY")
               ],
             ),
             Column(
@@ -50,13 +50,13 @@ class FieldSets extends StatelessWidget {
                 Container(
                   height: 25,
                   width: 25,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("assets/farmers_images/i3.png"),
                     )
                   ),
                 ),
-                Text("LOCAL SOURCING")
+                const Text("LOCAL SOURCING")
               ],
             ),
           ],

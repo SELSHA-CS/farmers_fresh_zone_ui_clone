@@ -6,23 +6,23 @@ class SearchBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 40,
       child: TextField(
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
           hintText: "Search for vegetables, fruits...",
-          prefixIcon: Icon(Icons.search, color: Colors.lightGreen,),
+          prefixIcon: const Icon(Icons.search, color: Colors.lightGreen,),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Colors.white,
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Colors.lightGreen,
             ),
           ),

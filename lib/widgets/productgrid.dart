@@ -11,31 +11,38 @@ class ProductGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        physics: const NeverScrollableScrollPhysics(),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemCount: products.length,
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Container(
+          child: SizedBox(
             height: 200,
             child: Card(
               child: Column(
                 children: [
                   Image.asset(products[index], fit: BoxFit.fill,),
-                  SizedBox(height: 10,),
-                  Row(
+                  const SizedBox(height: 10,),
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("\$32.4"),
                       Text("14% OFF"),
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("0.3kg"),
-                      ElevatedButton(onPressed: (){}, child: Text("ADD",), style: ElevatedButton.styleFrom(backgroundColor: Colors.green),),
+                      const Text("0.3kg"),
+                      ElevatedButton(
+                        onPressed: (){}, 
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green
+                        ),
+                        //child: Text("add", ),
+                        child: const Text("ADD"),
+                      ),
                     ],
                   )
                 ],

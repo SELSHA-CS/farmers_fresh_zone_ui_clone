@@ -24,7 +24,7 @@ class MyCarousel extends StatelessWidget {
       options: CarouselOptions(
         height: 250,
         viewportFraction: 1,
-        autoPlayInterval: Duration(seconds: 5),
+        autoPlayInterval: const Duration(seconds: 2),
         autoPlay: true,
         initialPage: 1,
         pauseAutoPlayOnTouch: true,

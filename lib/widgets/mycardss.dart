@@ -19,11 +19,11 @@ class MyCards1 extends StatelessWidget {
             color: Colors.green[200],
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15),
-              child: Container(
+              child: SizedBox(
                 height: 50,
                 width: 150,
                 child: Center(
-                  child: Text(names[index], style: TextStyle(fontWeight: FontWeight.bold),),
+                  child: Text(names[index], style: const TextStyle(fontWeight: FontWeight.bold),),
                 ),
                 ),
             ),

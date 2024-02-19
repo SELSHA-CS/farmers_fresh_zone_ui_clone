@@ -1,5 +1,3 @@
-import 'dart:math';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:farmers_fresh_zone_ui_clone/widgets/fieldsets.dart';
 import 'package:farmers_fresh_zone_ui_clone/widgets/mycardss.dart';
 import 'package:farmers_fresh_zone_ui_clone/widgets/mycarousel.dart';
@@ -11,6 +9,8 @@ import 'package:farmers_fresh_zone_ui_clone/widgets/searchbox.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -64,8 +64,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightGreen,
-        title: Text("FARMERS FRESH ZONE"),
-        actions: [
+        title: const Text("FARMERS FRESH ZONE"),
+        actions: const [
           Row(
             children: [
               Icon(Icons.location_history),
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
         ],
         bottom: AppBar(
           backgroundColor: Colors.lightGreen,
-          title: SearchBox(),
+          title: const SearchBox(),
         ),
       ),
       body: SingleChildScrollView(
@@ -84,10 +84,10 @@ class _HomePageState extends State<HomePage> {
           children: [
             MyCards1(names: names),
             MyCarousel(images: images),
-            FieldSets(),
-            MyText(),
+            const FieldSets(),
+            const MyText(),
             MyGrids(cards: cards, names: names),
-            MyText2(),
+            const MyText2(),
             ProductGrid(products: products)
           ],
         ),

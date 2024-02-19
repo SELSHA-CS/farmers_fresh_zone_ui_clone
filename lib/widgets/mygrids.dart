@@ -14,12 +14,12 @@ class MyGrids extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
         ),
         itemCount: cards.length,
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) => ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: Card(
@@ -27,13 +27,13 @@ class MyGrids extends StatelessWidget {
             child: Column(
               children: [
                 ClipRRect(
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
                     ),
                     child: Image.asset(cards[index], fit: BoxFit.fill,)),
-                SizedBox(height: 15,),
-                Text(names[index], style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.black),),
+                const SizedBox(height: 15,),
+                Text(names[index], style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.black),),
               ],
             ),
           ),
