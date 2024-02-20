@@ -1,13 +1,9 @@
+import 'package:farmers_fresh_zone_ui_clone/screens/dummydata.dart';
 import 'package:flutter/material.dart';
 class MyGrids extends StatelessWidget {
   const MyGrids({
     super.key,
-    required this.cards,
-    required this.names,
   });
-
-  final List<String> cards;
-  final List<String> names;
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +27,9 @@ class MyGrids extends StatelessWidget {
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
                     ),
-                    child: Image.asset(cards[index], fit: BoxFit.fill,)),
+                    child: Image.asset(cards[index]['img'], fit: BoxFit.fill,)),
                 const SizedBox(height: 15,),
-                Text(names[index], style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.black),),
+                Text(cards[index]['name'], style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.black),),
               ],
             ),
           ),

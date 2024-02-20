@@ -6,6 +6,7 @@ import 'package:farmers_fresh_zone_ui_clone/widgets/mytext2.dart';
 import 'package:farmers_fresh_zone_ui_clone/widgets/mytexts.dart';
 import 'package:farmers_fresh_zone_ui_clone/widgets/productgrid.dart';
 import 'package:farmers_fresh_zone_ui_clone/widgets/searchbox.dart';
+import 'package:farmers_fresh_zone_ui_clone/widgets/viewbtn.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,17 +17,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var names = [
-    "VEGETABLES",
-    "FRUITS",
-    "EXOTIC",
-    "FRESH CUTS",
-    "OFFERS",
-    "NUTRITION CHARGERS",
-    "PACKED FLAVOURS",
-    "GOURMET SALADS"
-  ];
-
+  
   var images = [
     "assets/farmers_images/1.jpg",
     "assets/farmers_images/2.jpg",
@@ -35,28 +26,6 @@ class _HomePageState extends State<HomePage> {
     "assets/farmers_images/5.jpg",
     "assets/farmers_images/6.jpg",
     "assets/farmers_images/7.jpg",
-  ];
-
-  var cards = [
-    "assets/farmers_images/c2.jpg",
-    "assets/farmers_images/c3.jpg",
-    "assets/farmers_images/c4.jpg",
-    "assets/farmers_images/c5.jpg",
-    "assets/farmers_images/c1.jpg",
-    "assets/farmers_images/c6.jpg",
-    "assets/farmers_images/c7.jpg",
-    "assets/farmers_images/c8.jpg",
-  ];
-
-  var products = [
-    "assets/farmers_images/p1.jpg",
-    "assets/farmers_images/p2.jpg",
-    "assets/farmers_images/p3.jpg",
-    "assets/farmers_images/p4.jpg",
-    "assets/farmers_images/p5.jpg",
-    "assets/farmers_images/p6.jpg",
-    "assets/farmers_images/p7.jpg",
-    "assets/farmers_images/p8.jpg",
   ];
 
   @override
@@ -82,13 +51,14 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            MyCards1(names: names),
+            MyCards1(),
             MyCarousel(images: images),
             const FieldSets(),
-            const MyText(),
-            MyGrids(cards: cards, names: names),
+            MyText(text: 'Shop By Category',),
+            MyGrids(),
             const MyText2(),
-            ProductGrid(products: products)
+            ProductGrid(),
+            ViewButton(),
           ],
         ),
       ),

@@ -1,11 +1,9 @@
+import 'package:farmers_fresh_zone_ui_clone/screens/dummydata.dart';
 import 'package:flutter/material.dart';
 class MyCards1 extends StatelessWidget {
   const MyCards1({
     super.key,
-    required this.names,
   });
-
-  final List<String> names;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +13,7 @@ class MyCards1 extends StatelessWidget {
         padding: const EdgeInsets.all(5.0),
         child: ListView(
           scrollDirection: Axis.horizontal,
-          children: List.generate(names.length, (index) => Card(
+          children: List.generate(cards.length, (index) => Card(
             color: Colors.green[200],
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15),
@@ -23,7 +21,7 @@ class MyCards1 extends StatelessWidget {
                 height: 50,
                 width: 150,
                 child: Center(
-                  child: Text(names[index], style: const TextStyle(fontWeight: FontWeight.bold),),
+                  child: Text(cards[index]['name'], style: const TextStyle(fontWeight: FontWeight.bold),),
                 ),
                 ),
             ),

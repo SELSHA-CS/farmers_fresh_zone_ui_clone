@@ -16,7 +16,7 @@ class _SplashsState extends State<Splashs> {
   void initState() {
     Timer(const Duration(seconds: 5), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => MainPage())
+        MaterialPageRoute(builder: (context) => const MainPage())
       );
     });
     super.initState();
