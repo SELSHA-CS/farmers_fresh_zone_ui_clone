@@ -1,3 +1,8 @@
+<div style="display:flex; justify-content:space-between;">
+    <img src="https://github.com/SELSHA-CS/farmers_fresh_zone_ui_clone/assets/142321043/a4c55b95-c4e9-49e2-8cd2-b886270e8399" alt="Screenshot 1" width="30%">
+    <img src="https://github.com/SELSHA-CS/farmers_fresh_zone_ui_clone/assets/142321043/f9a7f731-eb70-45c6-9700-32cbd2e8c03d" alt="Screenshot 2" width="30%">
+</div>
+
 # farmers_fresh_zone_ui_clone
 
 A new Flutter project.
